@@ -1,0 +1,311 @@
+---
+title: "Codebook template"
+author: "Your name here"
+date: "The date here"
+output:
+  html_document:
+    keep_md: yes
+---
+
+## Project Description
+Project for the "Getting and Cleaning Data" course on Coursera. [Data from accelerometers from the Samsung Galaxy S smartphone](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) is cleaned up and summarized in a tidy dataset.
+
+##Study design and data processing
+
+###Collection of the raw data
+The data is from [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). More specific info about the data can be found at the source.
+
+##Creating the tidy datafile
+
+###Guide to create the tidy data file
+1. Download the data from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+2. Unzip the data in your workind directory
+3. Open RStudio and make sure you have dplyr and tidyr installed
+4. Run run_analysis.R
+5. The script will create a table called "merged" that contains the merged data, and a table called "summarized"" that contains the tidy data
+
+###Cleaning of the data
+The script merges the training and test datasets, extracts only the mean and standard deviation for each measurement, uses descriptive activity names and variable names, and creates a tidy dataset with the average of each variable for each activity and each subject.
+The [README document](https://github.com/sjous/GACD/blob/master/README.md) goes into greater detail.
+
+##Description of the variables in the GACDprojectdata.txt file
+GACDprojectdata.txt is a 180x68 table that contains the tidy data created by the script. The variables are "Subject" (number of the subject performing the activity), Activity (description of the activity performed), and only the means and standard deviation variables contained in the original data.
+
+###Subject
+The number of the subject performing the activity
+Class: integer
+Unique values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+
+###Activity
+The name of the activity performed by the subject
+Class: character
+Unique values: "Laying", "Sitting", "Standing", "Walking", "Walking downstairs", "Walking upstairs"
+
+###Time Body Acceleration - Mean - X
+The variable "tBodyAcc-mean()-X" in the original dataset
+Class: numeric
+
+###Time Body Acceleration - Mean - Y
+The variable "tBodyAcc-mean()-Y" in the original dataset
+Class: numeric
+
+###Time Body Acceleration - Mean - Z
+The variable "tBodyAcc-mean()-Z" in the original dataset
+Class: numeric
+
+###Time Body Acceleration - Standard Deviation - X
+The variable "tBodyAcc-std()-X" in the original dataset
+Class: numeric
+
+###Time Body Acceleration - Standard Deviation - Y
+The variable "tBodyAcc-std()-Y" in the original dataset
+Class: numeric
+
+###Time Body Acceleration - Standard Deviation - Z
+The variable "tBodyAcc-std()-Z" in the original dataset
+Class: numeric
+
+###Time Gravity Acceleration - Mean - X
+The variable "tGravityAcc-mean()-X" in the original dataset
+Class: numeric
+
+###Time Gravity Acceleration - Mean - Y
+The variable "tGravityAcc-mean()-Y" in the original dataset
+Class: numeric
+
+###Time Gravity Acceleration - Mean - Z
+The variable "tGravityAcc-mean()-Z" in the original dataset
+Class: numeric
+
+###Time Gravity Acceleration - Standard Deviation - X
+The variable "tGravityAcc-std()-X" in the original dataset
+Class: numeric
+
+###Time Gravity Acceleration - Standard Deviation - Y
+The variable "tGravityAcc-std()-Y" in the original dataset
+Class: numeric
+
+###Time Gravity Acceleration - Standard Deviation - Z
+The variable "tGravityAcc-std()-Y" in the original dataset
+Class: numeric
+
+###Time Body Acceleration Jerk - Mean - X
+The variable "tBodyAccJerk-mean()-X" in the original dataset
+Class: numeric
+
+###Time Body Acceleration Jerk - Mean - Y
+The variable "tBodyAccJerk-mean()-Y" in the original dataset
+Class: numeric
+
+###Time Body Acceleration Jerk - Mean - Z
+The variable "tBodyAccJerk-mean()-Z" in the original dataset
+Class: numeric
+
+###Time Body Acceleration Jerk - Standard Deviation - X
+The variable "tBodyAccJerk-std()-X" in the original dataset
+Class: numeric
+
+###Time Body Acceleration Jerk - Standard Deviation - Y
+The variable "tBodyAccJerk-std()-Y" in the original dataset
+Class: numeric
+
+###Time Body Acceleration Jerk - Standard Deviation - Z
+The variable "tBodyAccJerk-std()-Z" in the original dataset
+Class: numeric
+
+###Time Body Gyro - Mean - X
+The variable "tBodyGyro-mean()-X" in the original dataset
+Class: numeric
+
+###Time Body Gyro - Mean - Y
+The variable "tBodyGyro-mean()-Y" in the original dataset
+Class: numeric
+
+###Time Body Gyro - Mean - Z
+The variable "tBodyGyro-mean()-Z" in the original dataset
+Class: numeric
+
+###Time Body Gyro - Standard Deviation - X
+The variable "tBodyGyro-std()-X" in the original dataset
+Class: numeric
+
+###Time Body Gyro - Standard Deviation - Y
+The variable "tBodyGyro-std()-Y" in the original dataset
+Class: numeric
+
+###Time Body Gyro - Standard Deviation - Z
+The variable "tBodyGyro-std()-Z" in the original dataset
+Class: numeric
+
+###Time Body Gyro Jerk - Mean - X
+The variable "tBodyGyroJerk-mean()-X" in the original dataset
+Class: numeric
+
+###Time Body Gyro Jerk - Mean - Y
+The variable "tBodyGyroJerk-mean()-Y" in the original dataset
+Class: numeric
+
+###Time Body Gyro Jerk - Mean - Z
+The variable "tBodyGyroJerk-mean()-Z" in the original dataset
+Class: numeric
+
+###Time Body Gyro Jerk - Standard Deviation - X
+The variable "tBodyGyroJerk-std()-X" in the original dataset
+Class: numeric
+
+###Time Body Gyro Jerk - Standard Deviation - Y
+The variable "tBodyGyroJerk-std()-Y" in the original dataset
+Class: numeric
+
+###Time Body Gyro Jerk - Standard Deviation - Z
+The variable "tBodyGyroJerk-std()-Z" in the original dataset
+Class: numeric
+
+###Time Body Acceleration Mag - Mean
+The variable "tBodyAccMag-mean()" in the original dataset
+Class: numeric
+
+###Time Body Acceleration Mag - Standard Deviation
+The variable "tBodyAccMag-std()" in the original dataset
+Class: numeric
+
+###Time Gravity Acceleration Mag - Mean
+The variable "tGravityAccMag-mean()" in the original dataset
+Class: numeric
+
+###Time Gravity Acceleration Mag - Standard Deviation
+The variable "tGravityAccMag-std()" in the original dataset
+Class: numeric
+
+###Time Body Acceleration Jerk Mag - Mean
+The variable "tBodyAccJerkMag-mean()" in the original dataset
+Class: numeric
+
+###Time Body Acceleration Jerk Mag - Standard Deviation
+The variable "tBodyAccJerkMag-std()" in the original dataset
+Class: numeric
+
+###Time Body Gyro Mag - Mean
+The variable "tBodyGyroMag-mean()" in the original dataset
+Class: numeric
+
+###Time Body Gyro Mag - Standard Deviation
+The variable "tBodyGyroMag-std()" in the original dataset
+Class: numeric
+
+###Time Body Gyro Jerk Mag - Mean
+The variable "tBodyGyroJerkMag-mean()" in the original dataset
+Class: numeric
+
+###Time Body Gyro Jerk Mag - Standard Deviation
+The variable "tBodyGyroJerkMag-std()" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration - Mean - X
+The variable "fBodyAcc-mean()-X" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration - Mean - Y
+The variable "fBodyAcc-mean()-Y" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration - Mean - Z
+The variable "fBodyAcc-mean()-Z" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration - Standard Deviation - X
+The variable "fBodyAcc-std()-X" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration - Standard Deviation - Y
+The variable "fBodyAcc-std()-Y" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration - Standard Deviation - Z
+The variable "fBodyAcc-std()-Z" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration Jerk - Mean - X
+The variable "fBodyAcc-meanFreq()-X" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration Jerk - Mean - Y
+The variable "fBodyAcc-meanFreq()-Y" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration Jerk - Mean - Z
+The variable "fBodyAcc-meanFreq()-Z" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration Jerk - Standard Deviation - X
+The variable "fBodyAccJerk-mean()-X" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration Jerk - Standard Deviation - Y
+The variable "fBodyAccJerk-mean()-Y" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration Jerk - Standard Deviation - Z
+The variable "fBodyAccJerk-mean()-Z" in the original dataset
+Class: numeric
+
+###Frequency Body Gyro - Mean - X
+The variable "fBodyAccJerk-std()-X" in the original dataset
+Class: numeric
+
+###Frequency Body Gyro - Mean - Y
+The variable "fBodyAccJerk-std()-Y" in the original dataset
+Class: numeric
+
+###Frequency Body Gyro - Mean - Z
+The variable "fBodyAccJerk-std()-Z" in the original dataset
+Class: numeric
+
+###Frequency Body Gyro - Standard Deviation - X
+The variable "fBodyGyro-mean()-X" in the original dataset
+Class: numeric
+
+###Frequency Body Gyro - Standard Deviation - Y
+The variable "fBodyGyro-mean()-Y" in the original dataset
+Class: numeric
+
+###Frequency Body Gyro - Standard Deviation - Z
+The variable "fBodyGyro-mean()-Z" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration Mag - Mean
+The variable "fBodyAccMag-mean()" in the original dataset
+Class: numeric
+
+###Frequency Body Acceleration Mag - Standard Deviation
+The variable "fBodyAccMag-std()" in the original dataset
+Class: numeric
+
+###Frequency Body Body Acceleration Jerk Mag - Mean
+The variable "fBodyBodyAccJerkMag-mean()" in the original dataset
+Class: numeric
+
+###Frequency Body Body Acceleration Jerk Mag - Standard Deviation
+The variable "fBodyBodyAccJerkMag-std()" in the original dataset
+Class: numeric
+
+###Frequency Body Body Gyro Mag - Mean
+The variable "fBodyBodyGyroMag-mean()" in the original dataset
+Class: numeric
+
+###Frequency Body Body Gyro Mag - Standard Deviation
+The variable "fBodyBodyGyroMag-std()" in the original dataset
+Class: numeric
+
+###Frequency Body Body Gyro Jerk Mag - Mean
+The variable "fBodyBodyGyroJerkMag-mean()" in the original dataset
+Class: numeric
+
+###Frequency Body Body Gyro Jerk Mag - Standard Deviation
+The variable "fBodyBodyGyroJerkMag-std()" in the original dataset
+Class: numeric
+
+
+##Sources
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
